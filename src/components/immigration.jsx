@@ -13,7 +13,7 @@ const ImmigrationExtractor = () => {
   const [error, setError] = useState('');
   const [attempts, setAttempts] = useState(0);
 
-  const MAX_ATTEMPTS = 6;
+  const MAX_ATTEMPTS = 10;
 
   const handleSubmit = async () => {
     if (!s3Path.trim()) {
@@ -57,10 +57,16 @@ const ImmigrationExtractor = () => {
         if (response.status === 200) {
           setResult(response.data);
           setIsSubmitting(false);
-        } else if (response.status === 202) {
-          setStatusMessages(prev => [...prev, response.data.message || '⏳ Processing...']);
-          setTimeout(() => setAttempts(a => a + 1), attempts === 1 ? 6000 : 15000);
-        }
+        }else if (response.status === 202) {
+  const message = response.data.message || '⏳ Processing...';
+  setStatusMessages(prev => {
+    if (!prev.includes(message)) {
+      return [...prev, message];
+    }
+    return prev;
+  });
+  setTimeout(() => setAttempts(a => a + 1), attempts === 1 ? 6000 : 15000);
+}
       } catch (err) {
         setError(`❌ Error fetching status: ${err.response?.data || err.message}`);
         setIsSubmitting(false);
