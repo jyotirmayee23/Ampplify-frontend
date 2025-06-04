@@ -1,7 +1,8 @@
 .status-checker-container {
   padding: 20px;
-  margin: 20px auto;
+  margin: 17vh auto;
   width: fit-content;
+  max-width: 90%;
   background-color: #f0f4f8;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -9,6 +10,7 @@
   font-size: 1.1rem;
   color: #333;
   text-align: center;
+  box-sizing: border-box;
 }
 
 .spinner {
@@ -24,4 +26,19 @@
 @keyframes spin {
   0% { transform: rotate(0deg);}
   100% { transform: rotate(360deg);}
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .status-checker-container {
+    margin: 15vh auto;
+    padding: 15px;
+    font-size: 1rem;
+  }
+
+  .spinner {
+    width: 20px;
+    height: 20px;
+    border-width: 3px;
+  }
 }
