@@ -4,7 +4,7 @@ import { Button, Form, Alert, Spinner, Card } from 'react-bootstrap';
 
 const ImmigrationExtractor = () => {
   const [s3Path, setS3Path] = useState(
-    process.env.REACT_APP_S3_BUCKET
+    "https://genai-konze-student-documents.s3.ap-south-1.amazonaws.com/Gopi+CHATTI+2/"
   );
   const [jobId, setJobId] = useState('');
   const [statusMessages, setStatusMessages] = useState([]);
