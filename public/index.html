@@ -6,37 +6,40 @@
   <title>Operisoft Genai Portfolio</title>
   <style>
     html, body {
-      margin: 0;
-      padding: 0;
-      overflow-x: hidden;
-      height: 100%;
-      font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  min-height: 100%;  /* changed from height: 100% */
+  font-family: sans-serif;
 
-      /* Smooth blue-to-green blend, centered white highlight */
-      background: linear-gradient(to right, #cfe8ff 0%, #ffffff 50%, #d4fdd6 100%);
-    }
+  /* Smooth blue-to-green blend, centered white highlight */
+  background: linear-gradient(to right, #cfe8ff 0%, #ffffff 50%, #d4fdd6 100%);
+}
 
-    /* Centered logo at top */
-    .logo-container {
-      position: absolute;
-      margin-top: 3%;
-      top: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 999;
-      text-align: center;
-    }
+/* Centered logo at top */
+.logo-container {
+  position: absolute;
+  margin-top: 3%;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+  text-align: center;
+}
 
-    .logo-container img {
-      max-width: 100%;
-      height: 65px;
-    }
+.logo-container img {
+  max-width: 100%;
+  height: 65px;
+}
 
-    /* Ensures the React root renders properly */
-    #root {
-      position: relative;
-      z-index: 1;
-    }
+/* Ensures the React root renders properly */
+#root {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;  /* added so root can grow and enable scroll */
+}
+
   </style>
 </head>
 <body>
