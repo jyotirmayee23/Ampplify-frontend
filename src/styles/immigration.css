@@ -1,0 +1,124 @@
+/* Base container styling */
+.container.mt-5 {
+  max-width: 800px;
+  width: 100%;
+  padding: 1.5rem;
+  /* margin: 10 auto; */
+  margin-top:5rem !important;
+  box-sizing: border-box;
+}
+
+/* Headings */
+h1 {
+  color: #2c3e50;
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
+  text-align: center;
+}
+
+/* Input fields */
+.form-control {
+  width: 100%;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #dee2e6;
+  box-sizing: border-box;
+}
+
+.form-control:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 0.2rem rgba(74, 144, 226, 0.25);
+  outline: none;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: #4caf50;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.btn-primary:hover {
+  background-color: #4caf50;
+}
+
+.btn-primary:disabled {
+  background-color: #a0c4ff;
+  cursor: not-allowed;
+}
+
+/* Alerts */
+.alert {
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+
+.alert-danger {
+  background-color: #ffe3e6;
+  border-color: #ff758c;
+  color: #ff0000;
+}
+
+.alert-info {
+  background-color: #e3f2fd;
+  border-color: #64b5f6;
+  color: #1976d2;
+}
+
+.alert-success {
+  background-color: #e8f5e9;
+  border-color: #81c784;
+  color: #2e7d32;
+}
+
+/* JSON Result / Output */
+pre, .json-result {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  max-height: 500px;
+  overflow-y: auto;
+  font-size: 0.9rem;
+}
+
+/* Spinner */
+.spinner-border {
+  vertical-align: middle;
+}
+
+/* Media Query for smaller devices */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .btn-primary {
+    font-size: 0.95rem;
+    padding: 0.6rem;
+  }
+
+  .form-control {
+    font-size: 0.95rem;
+    padding: 0.6rem;
+  }
+
+  .alert {
+    font-size: 0.9rem;
+  }
+
+  pre, .json-result {
+    font-size: 0.85rem;
+  }
+}
