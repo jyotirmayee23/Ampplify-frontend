@@ -10,6 +10,7 @@ const HomePage = () => {
     { name: 'Chat with PDF', path: '/chat-pdf' },
     { name: 'Immigration Information Extraction', path: '/immigration-info' },
     { name: 'Damage Detection', path: 'http://43.205.185.17:5002/' },
+    { name: 'Health Dashboard and Clinical Assistant', path:'https://health.operisoft.com'}
   ];
 
   return (
