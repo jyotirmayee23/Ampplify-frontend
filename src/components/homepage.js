@@ -1,6 +1,5 @@
 import React from 'react';
 import { Button, Container, Typography } from '@mui/material';
-import { Link } from 'react-router-dom';
 import '../styles/app.css';
 
 const HomePage = () => {
@@ -10,7 +9,7 @@ const HomePage = () => {
     { name: 'Chat with PDF', path: '/chat-pdf' },
     { name: 'Immigration Information Extraction', path: '/immigration-info' },
     { name: 'Damage Detection', path: 'http://43.205.185.17:5002/' },
-    { name: 'Health Dashboard and Clinical Assistant', path:'https://health.operisoft.com'}
+    { name: 'Health Dashboard and Clinical Assistant', path: 'https://health.operisoft.com' }
   ];
 
   return (
@@ -27,9 +26,11 @@ const HomePage = () => {
             <Button
               key={index}
               variant="contained"
-              component={Link}
-              to={app.path}
               className="app-button"
+              component="a"
+              href={app.path}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               {app.name}
             </Button>
