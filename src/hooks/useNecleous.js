@@ -27,7 +27,7 @@ const useNecleous = (s3Paths) => {
 
     try {
       const response = await axios.post(
-        process.env.REACT_APP_SUBMIT_NECLEOUS_API_URL,
+        process.env.REACT_APP_SUBMIT_NUCLEOUS_API_URL,
         { links },
         { headers: { 'Content-Type': 'application/json' } }
       );
@@ -61,7 +61,7 @@ useEffect(() => {
 
     try {
       const res = await axios.post(
-        process.env.REACT_APP_STATUS_NECLEOUS_API_URL,
+        process.env.REACT_APP_STATUS_NUCLEOUS_API_URL,
         { job_id: jobId },
         { headers: { 'Content-Type': 'application/json' } }
       );
