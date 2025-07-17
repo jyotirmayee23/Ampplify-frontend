@@ -6,6 +6,7 @@ import InvoiceProcessing from './pages/invoiceprocessing';
 import ChatWithPDF from './pages/Chatpdf';
 import ImmigrationInfo from './pages/immigrationinfo';
 //import DamageDetection from './pages/DamageDetection';
+import Nucleous from "./pages/nucleous";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/invoice-processing" element={<InvoiceProcessing />} />
         <Route path="/chat-pdf/*" element={<ChatWithPDF />} />
         <Route path="/immigration-info" element={<ImmigrationInfo />} />
+        <Route path="/referral-summary" element={<Nucleous/>}/>
 
 
 
