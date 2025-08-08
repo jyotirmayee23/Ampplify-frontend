@@ -4,7 +4,7 @@ import '../styles/healthcare.css'; // Import the CSS file
 
 const HomeReferralPage = () => {
   const [s3Paths, setS3Paths] = useState(
-    `s3://chartmate-idp1/Ayrom.WC1.pdf\ns3://chartmate-idp1/Ayrom.WC2.pdf`
+    `s3://chartmate-idp-deployment-1/inbound+15.pdf\ns3://chartmate-idp-deployment-1/8df068b1-1fab-48e1-83bb-884f92267cb7.pdf`
   );
   const {
     jobId,
@@ -46,7 +46,7 @@ const HomeReferralPage = () => {
       {status && (
         <div className="result-section">
           <div className="result-header">
-            <h3 className="result-title">🎉 Job Completed</h3>
+            <h3 className="result-title"> Job Completed</h3>
             <button
               className="toggle-button"
               onClick={() => setShowResult(!showResult)}
