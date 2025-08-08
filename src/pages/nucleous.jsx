@@ -19,7 +19,7 @@ const HomeReferralPage = () => {
 
   return (
     <div className="referral-container">
-      <h1 className="heading">📄 Referral Summary</h1>
+      <h1 className="heading">📄 Nucleon Health</h1>
 
       <label htmlFor="s3-input" className="label">
         🧾 Paste S3 PDF links (one per line):
