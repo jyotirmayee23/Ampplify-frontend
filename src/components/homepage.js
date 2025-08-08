@@ -10,7 +10,7 @@ const HomePage = () => {
     { name: 'Immigration Information Extraction', path: '/immigration-info' },
     { name: 'Damage Detection', path: 'http://43.205.185.17:5002/' },
     { name: 'Health Dashboard and Clinical Assistant', path: 'https://health.operisoft.com' },
-    { name: 'Referral Summary', path: '/nucleon_health'}
+    { name: 'Nucleon Health', path: '/nucleon_health'}
   ];
 
   return (
@@ -43,4 +43,5 @@ const HomePage = () => {
 };
 
 export default HomePage;
+
 
