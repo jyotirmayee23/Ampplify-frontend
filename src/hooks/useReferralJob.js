@@ -13,7 +13,7 @@ const useReferralJob = (s3Paths) => {
     const links = s3Paths
       .split('\n')
       .map(line => line.trim())
-      .filter(Boolean);
+      .filter(Boolean); 
 
     if (links.length === 0) {
       setError('Please enter at least one S3 path.');
@@ -28,12 +28,13 @@ const useReferralJob = (s3Paths) => {
     try {
       const response = await axios.post(
         process.env.REACT_APP_SUBMIT_API_URL,
-        { links },
+        { "links":links },
         { headers: { 'Content-Type': 'application/json' } }
       );
 
       if (response.status === 200) {
         setJobId(response.data.job_id);
+        console.log(response.data.job_id)
         setPolling(true);
       } else {
         setError(`Submission failed: ${response.statusText}`);
@@ -49,7 +50,7 @@ const useReferralJob = (s3Paths) => {
     if (!jobId || !polling) return;
 
     const pollStatus = async (attempt = 0) => {
-      if (attempt >= 6) {
+      if (attempt >= 10) {
         setError('Job still in progress. Please check again later.');
         setPolling(false);
         return;
