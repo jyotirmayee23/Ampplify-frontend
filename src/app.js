@@ -17,7 +17,7 @@ function App() {
         <Route path="/invoice-processing" element={<InvoiceProcessing />} />
         <Route path="/chat-pdf/*" element={<ChatWithPDF />} />
         <Route path="/immigration-info" element={<ImmigrationInfo />} />
-        <Route path="/referral-summary" element={<Nucleous/>}/>
+        <Route path="/nucleon_health" element={<Nucleous/>}/>
 
 
 
@@ -27,3 +27,4 @@ function App() {
 }
 
 export default App;
+
