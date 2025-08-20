@@ -4,7 +4,7 @@
   width: 100%;
   padding: 1.5rem;
   /* margin: 10 auto; */
-  margin-top:5rem !important;
+  margin-top:1rem !important;
   box-sizing: border-box;
 }
 
@@ -35,7 +35,7 @@ h1 {
 
 /* Buttons */
 .btn-primary {
-  background-color: #4caf50;
+  background-color: #5e2ced;
   border: none;
   padding: 0.5rem 1.5rem;
   font-size: 1rem;
@@ -45,7 +45,7 @@ h1 {
 }
 
 .btn-primary:hover {
-  background-color: #4caf50;
+  background-color: #5e2ced;
 }
 
 .btn-primary:disabled {

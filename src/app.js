@@ -7,9 +7,12 @@ import ChatWithPDF from './pages/Chatpdf';
 import ImmigrationInfo from './pages/immigrationinfo';
 //import DamageDetection from './pages/DamageDetection';
 import Nucleous from "./pages/nucleous";
+import Header from './components/header';
 
 function App() {
   return (
+    <>
+    <Header/>
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -23,6 +26,7 @@ function App() {
 
       </Routes>
     </Router>
+    </>
   );
 }
 

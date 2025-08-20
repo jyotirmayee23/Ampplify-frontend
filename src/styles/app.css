@@ -1,27 +1,44 @@
 .home-wrapper {
-  margin-top: 20vh ;
-  padding: 2rem;
-  background-color: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  /* margin-top: 10px; */
+  padding: 1rem;
+  background-color: transparent; 
+  box-shadow: none;
+  border-radius: 0;
   text-align: center;
 }
 
+
 @media (min-width: 768px) {
   .home-wrapper {
-    margin-top: 25vh;
-    padding: 3rem;
+    margin-top: 1vh;
+    padding: 2rem;
+
   }
+}
+.heading-badge {
+  display: inline-block;
+  background-color: #e4d9ff; /* light purple */
+  color: #5e2ced; /* text color */
+  padding: 0.6rem 2.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 50px; /* rounded pill shape */
+  margin-bottom: 0.5rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+.section-subtitle {
+  font-size: 0.3rem;
+  color: #734eda;
+  margin-bottom: 2rem;
 }
 
 .title {
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   font-weight: bolder;
-  font-size: 1.8rem !important;
+  font-size: 2rem !important;
   margin: 10px !important;
-  margin-bottom: 1rem !important;
-  color: #2c3e50;
-  
+  margin-bottom: 0.5rem !important;
+  color: #5e2ced;
 }
 
 @media (min-width: 768px) {
@@ -33,9 +50,9 @@
 .subtitle {
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   font-weight: 500;
-  font-size: 1.1rem !important;
-  margin-bottom: 2rem !important;
-  color: #34495e;
+  font-size: 1.3rem !important;
+  margin-bottom: 0.25rem !important;
+  color: #555555;
 }
 
 @media (min-width: 768px) {
@@ -44,28 +61,143 @@
   }
 }
 
-.button-container {
+.section-desc {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #777777;
+}
+
+/* Card container grid */
+.card-container {
+  max-width: fit-content; /* or wider */
+  margin: 0 auto;  /* center horizontally */
+  margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
-  justify-content: center;
+  justify-items:center;
+  justify-content: space-evenly;
+  gap: 1.5rem 2rem;
 }
 
-.app-button {
-  background-color: #4CAF50 !important;
-  color: white !important;
-  padding: 12px 24px !important;
-  font-size: 1rem !important;
-  border-radius: 8px !important;
-  text-transform: none !important;
-  flex: 1 1 100%;
-  max-width: 100%;
+
+/* Each card */
+.app-card {
+  background-color: #6d36ff;
+  color: white;
+  width: 220px;
+  height: 250px;
+  padding: 1rem;
+  border-radius: 20px;
+  position: relative; 
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* content at bottom */
+  align-items: flex-start;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+
 }
 
-@media (min-width: 600px) {
-  .app-button {
-    font-size: 1.2rem !important;
-    flex: 1 1 45%;
-    max-width: 45%;
+
+
+.app-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+.app-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+.card-icon {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  height: 120px;
+  width: 120px;
+  filter: brightness(0) invert(1);
+}
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+
+.card-title {
+  font-size: 1.4rem;
+  margin: 0.8rem 0;
+  text-align: left;
+  line-height: 1.6;
+}
+
+.card-button {
+  padding: 0.35rem 1rem;
+  font-size: 0.85rem;
+  border-radius: 50px;
+  text-transform: none;
+  background-color: #e2dbff;
+  color: #4b25cc;
+}
+
+
+.card-button:hover {
+  background-color: #e2dbff;
+  color: #4b25cc;
+}
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  height: 40px;
+}
+
+.logo-container {
+      /* position: fixed; */
+      top: 20px;
+      left: 20px;
+      z-index: 1000;
+    }
+
+    .logo-container img {
+      height: 70px;
+      width: auto;
+    }
+
+    .header{
+      width: 100%;
+      display: flex;
+      padding: 0.5rem;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      justify-items: center;
+    }
+
+    .header-icon{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+
+
+/* Responsive text scaling for smaller devices */
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.8rem !important;
+  }
+  .subtitle {
+    font-size: 1.1rem !important;
+  }
+  .card-title {
+    font-size: 0.95rem;
+  }
+  .card-button {
+    font-size: 0.9rem;
   }
 }

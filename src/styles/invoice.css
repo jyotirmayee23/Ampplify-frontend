@@ -10,7 +10,7 @@ body {
   margin: 4rem auto;
   padding: 2rem;
   background: white;
-  margin-top: 11%;
+  margin-top: 5%;
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -40,7 +40,7 @@ button {
 }
 
 button {
-  background-color: #4caf50;
+  background-color: #5e2ced;
   color: white;
   border: none;
   transition: background-color 0.3s ease;
@@ -66,12 +66,12 @@ button:disabled {
 
 .progress-fill {
   height: 100%;
-  background-color: #4caf50;
+  background-color: #5e2ced;
   transition: width 0.3s ease;
 }
 
 .results-container h3 {
-  color: #4caf50;
+  color: #5e2ced;
 }
 
 .json-viewer {

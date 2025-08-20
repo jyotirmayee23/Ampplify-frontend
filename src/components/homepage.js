@@ -1,40 +1,44 @@
 import React from 'react';
-import { Button, Container, Typography } from '@mui/material';
+import { Container, Typography } from '@mui/material';
 import '../styles/app.css';
+import recruit from "../assets/recruit.svg"
+import pdf from "../assets/pdf.svg"
+import invoice from "../assets/invoice.svg"
+import damage from "../assets/damage.svg"
+import bot from "../assets/bot.svg"
+import health from "../assets/health.svg"
+import immigration from "../assets/immigration.svg"
+import dashboard from "../assets/dashboard.svg"
 
 const HomePage = () => {
   const applications = [
-    { name: 'Home Healthcare Referral Summary', path: '/home-healthcare' },
-    { name: 'Invoice Processing', path: '/invoice-processing' },
-    { name: 'Chat with PDF', path: '/chat-pdf' },
-    { name: 'Immigration Information Extraction', path: '/immigration-info' },
-    { name: 'Damage Detection', path: 'http://43.205.185.17:5002/' },
-    { name: 'Health Dashboard and Clinical Assistant', path: 'https://health.operisoft.com' },
-    { name: 'Nucleon Health', path: '/nucleon_health'}
+    { name: 'Recruiter AI', path: 'https://recruiterai.operisoft.com/', icon:recruit },
+    { name: 'OperiBot', path: 'https://voiceapi.operisoft.com/', icon:bot },
+    { name: 'Healthcare Referral Summary', path: '/home-healthcare', icon:health },
+    { name: 'Invoice Processing', path: '/invoice-processing', icon:invoice },
+    { name: 'Damage Detection', path: 'http://43.205.185.17:5002/', icon:damage },
+    { name: 'Health Dashboard', path: 'https://health.operisoft.com', icon: dashboard },
+    { name: 'Immigration Extraction', path: '/immigration-info', icon:immigration },
+        { name: 'Chat with PDF', path: '/chat-pdf', icon:pdf },
   ];
 
   return (
-    <Container maxWidth="md">
+    <Container>
       <div className="home-wrapper">
-        <Typography variant="h4" className="title">
-          📂 Operisoft GenAI Projects
-        </Typography>
-        <Typography variant="h6" className="subtitle">
-          Select an Application
-        </Typography>
-        <div className="button-container">
+        <Typography variant="h4" className="heading-badge">Our Generative AI Solution</Typography>
+        <Typography variant="h5" className="section-subtitle">Select an application</Typography>
+
+        <div className="card-container">
           {applications.map((app, index) => (
-            <Button
-              key={index}
-              variant="contained"
-              className="app-button"
-              component="a"
-              href={app.path}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {app.name}
-            </Button>
+            <div className="app-card" key={index}>
+
+              <img className="card-icon" src={app.icon} alt='logo'></img>
+              <div className="card-content">
+              <div className="card-title">{app.name}</div>
+              <a href={app.path} target="_blank" rel="noopener noreferrer" className="card-button">
+                Find out more
+              </a></div>
+            </div>
           ))}
         </div>
       </div>
@@ -43,5 +47,3 @@ const HomePage = () => {
 };
 
 export default HomePage;
-
-

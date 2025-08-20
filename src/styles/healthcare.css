@@ -1,7 +1,7 @@
 .referral-container {
   max-width: 500px;
   margin: 4rem auto;
-  margin-top: 11%;
+  margin-top: 5%;
   padding: 2rem;
   background: #f0f0f0;
   border-radius: 12px;
@@ -41,7 +41,7 @@
   font-size: 1rem;
   border-radius: 8px;
   border: none;
-  background: #4CAF50;
+  background: #5e2ced;
   color: white;
   cursor: pointer;
   width: 100%;
