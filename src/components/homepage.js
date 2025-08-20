@@ -16,10 +16,10 @@ const HomePage = () => {
     { name: 'OperiBot', path: 'https://voiceapi.operisoft.com/', icon:bot },
     { name: 'Healthcare Referral Summary', path: '/home-healthcare', icon:health },
     { name: 'Invoice Processing', path: '/invoice-processing', icon:invoice },
-    { name: 'Damage Detection', path: 'http://43.205.185.17:5002/', icon:damage },
+    { name: 'Security Analysis', path: 'http://15.207.40.144:7000/', icon:damage },
     { name: 'Health Dashboard', path: 'https://health.operisoft.com', icon: dashboard },
     { name: 'Immigration Extraction', path: '/immigration-info', icon:immigration },
-        { name: 'Chat with PDF', path: '/chat-pdf', icon:pdf },
+    { name: 'Chat with PDF', path: '/chat-pdf', icon:pdf },
   ];
 
   return (
